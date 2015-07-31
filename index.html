@@ -2,17 +2,37 @@
 <head>
 	<title>Rohan Iyer</title>
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script type="text/javascript">
+		var ref = new Firebase('https://rohaniyer.firebaseio.com')
+		ref.child('porfolio').on('child_added', function(snapshot){
+			var value = snapshot.val()
+			var name = value["name"]
+			var link = value["link"]
+			var desc = value["description"]
+			var prize = value["prize"]
+			console.log(name)
+			//$('#features').append('<div id="project"><div id="projecttitle"><a href="' + link + '">' + name+ '</a></div></div>')
+			$('#features').append('<div id="project"><div id="projecttitle"><a href="'+ link +'">' + name + '</a></div><p id="text">' + desc + ' ' + prize + '</p><a href="' + link + '"><button id="goToProject">LEARN MORE</button></a>	</div>')
+		})
+	</script>
 	<style type="text/css">
 		body {
 			overflow-x:hidden;
 		}
 		@font-face {
-			font-family: BrandonReg;
-			src: url(font/brandon/Brandon_med.otf);
+		  font-family: OpenSansNormal;
+		  src: url(font/sourcesans/SourceSansPro-Semibold.otf) format("opentype");
 		}
 		@font-face {
 			font-family: BrandonThin;
 			src: url(font/brandon/Brandon_thin.otf);
+		}
+
+		@font-face {
+			font-family: BrandonReg;
+			src: url(font/brandon/Brandon_med.otf);
 		}
 
 		#landing {
@@ -100,7 +120,7 @@
 			font-size: 40pt;
 		}
 		#aboutText {
-			margin: 20px;
+			margin: 10vmin;
 			margin-bottom: 0;
 			margin-top: 0;
 		}
@@ -114,6 +134,7 @@
 			width: 100%;
 			padding-top: 20px;
 			padding: 20px;
+			margin: 0 auto;
 		}
 
 
@@ -152,16 +173,45 @@
 			width: 300px;
 			margin:10px;
 			text-align: center;
-			margin-top: 10px;
+			margin-top: 18px;
 			padding-top: 10px;
 			border-radius: 30px;
 		}
 		#projecttitle a{
 			text-decoration: none;
+			-webkit-transition-duration: 0.2s;
+			-moz-transition-duration: 0.2s;
+			transition-duration: 0.2s;
 			color:white;
 		}
-		#projecttitle a:hover{
-			color:blue;
+		#projecttitle a:hover {
+			color:#4183D7;
+		}
+		#text {
+			margin: 10px;
+			font-size: 12pt;
+		}
+		a #goToProject  {
+			font-family: 'OpenSansNormal';
+			background-color: #4183D7;
+			color: white;
+			font-size: 12pt;
+			border: 0;
+			outline: none;
+			width: 200px;
+			height: 50px;
+			border-radius: 25px;
+			bottom:-20px;
+			position: relative;
+
+			-webkit-transition-duration: 0.4s;
+			-moz-transition-duration: 0.4s;
+			transition-duration: 0.4s;
+
+		}
+		a #goToProject:hover  {
+			background-color: white;
+			color: #4183D7;
 		}
 
 	</style>
@@ -170,7 +220,7 @@
 
 
 	<div id="landing">
-		<p></b><img id="micon" src="img/drifts.png"></b></p>
+		<p></b><img id="micon" src="img/selfcropped.jpg"></b></p>
 		<h5>rohan iyer</h5>
 		<h5 class="smaller">developer. athlete. musician. student.</h5>
 		<!-- <img class="constellation" src="img/constel2.png"></img> -->
@@ -191,23 +241,13 @@
 		</div>
 		<div id="features">
 			<p>portfolio</p>
-			<!-- <p id="text">Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p> -->
+			<!-- <p id="text">Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
 			<div id="project">
-				<div id="projecttitle"><a href="dextolabs.github.io">Dexto</a></div>
-				<div></div>
-			</div>
-			<div id="project">
-				<div id="projecttitle"><a href="dextolabs.github.io">Dexto</a></div>
-				<div></div>
-			</div>
-			<div id="project">
-				<div id="projecttitle"><a href="dextolabs.github.io">Dexto</a></div>
-				<div></div>
-			</div>
-			<div id="project">
-				<div id="projecttitle"><a href="dextolabs.github.io">Dexto</a></div>
-				<div></div>
-			</div>
+				<div id="projecttitle"><a href="http://dextolabs.github.io">Dexto</a></div>
+				<p id="text">This project won sucha nd sdushc beause it wwas sucha  great project</p>
+				<a href="http://dextolabs.github.io"><button id="goToProject">LEARN MORE</button></a>	
+			</div> -->
+			
 		</div>
 	</div>
 	

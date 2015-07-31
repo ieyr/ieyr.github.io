@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Dexto Labs</title>
+	<title>Rohan Iyer</title>
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
 	<style type="text/css">
 		body {
@@ -35,7 +35,7 @@
 			top:-10%;
 			z-index: -1;
 			display: block;
-			background-color: rgba(255, 0, 0, 1);
+
 			background-image: url('img/background4.jpg');
 
 			/*background-color: #22313F;*/
@@ -74,30 +74,43 @@
 		#message p b {
 			font-family: 'BrandonReg'
 		}*/
+		#content {
+			position: absolute;
+			left: 0;
+			top:calc(100%);
+			height: auto;
+			width: 100%;
+			padding-top: 20px;
+			display: block;
+		}
 
 		#about {
 			font-family: 'BrandonThin';
-			position: absolute;
-			left: 0;
-			top:calc(100% + 70px);
-			background-color: white;
+			display: block;
+			background-color: rgba(255,255,255,0.98);
 			color:#7B8087;
-			font-size: 40pt;
-			height: 400px;
+			font-size: 20pt;
+			height: auto;
 			width: 100%;
 			padding-top: 20px;
 
-		}
 
+		}
+		#about p {
+			font-size: 40pt;
+		}
+		#aboutText {
+			margin: 20px;
+			margin-bottom: 0;
+			margin-top: 0;
+		}
 		#features {
 			font-family: 'BrandonThin';
-			position: absolute;
-			left: 0;
-			top:calc(100% + 400px);
-			background-color: #2ECC71;
+			display: block;
+			background-color: rgba(34,167,270,0.8);
 			color:white;
 			font-size: 40pt;
-			height: 300px;
+			height: auto;
 			width: 100%;
 			padding-top: 20px;
 		}
@@ -128,6 +141,10 @@
 			font-size: 20pt;
 		}
 
+		#project {
+			width: 
+		}
+
 	</style>
 </head>
 <body>
@@ -135,7 +152,7 @@
 
 	<div id="landing">
 		<p></b><img id="micon" src="img/drifts.png"></b></p>
-		<h5>Rohan Iyer</h5>
+		<h5>rohan iyer</h5>
 		<h5 class="smaller">developer. athlete. musician. student.</h5>
 		<!-- <img class="constellation" src="img/constel2.png"></img> -->
 
@@ -143,12 +160,22 @@
 	<!-- <div id="message">
 		<p>Dexto is currently in <b>development!</b></p>
 	</div> -->
-	<div id="about">
-		<p>What is Dexto?</b></p>
+	<div id="content">
+		<div id="about">
+			<p>about me</p>
+			<div id="aboutText">
+				I am a junior in high school and I enjoy coding and going to hackathons. I also play soccer competitively on the De Anza Force and I run cross-country for my school. I enjoy listening to 
+				all sorts of music and have been playing the guitar for 9 years. During the year, I work on various projects 
+				which you can a take a look at below in my portfolio.<br/><br/>
+			</div>
+			
+		</div>
+		<div id="features">
+			<p>portfolio</p>
+			<p id="text">Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
+		</div>
 	</div>
-	<div id="features">
-		<p>Features</b></p>
-	</div>
+	
 
 	<div id="background"></div>
 

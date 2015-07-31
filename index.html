@@ -19,20 +19,15 @@
 			font-size:50pt;
 			font-family: 'BrandonThin';
 			letter-spacing: 2px;
-			color: #2ECC71;
+			color: white;
 			font-weight: 700;
-			top: 35%;
+			top: 18%;
 			width: 100%;
 			position: absolute;
 			overflow: hidden;
 
 		}
-		.constellation{
-			width: 100%;
-			size: cover;
-			position: relative;
 
-		}
 
 		#background {
 			position: fixed;
@@ -40,7 +35,9 @@
 			top:-10%;
 			z-index: -1;
 			display: block;
-			background-image: url('img/drifts.png');
+			background-color: rgba(255, 0, 0, 1);
+			background-image: url('img/background4.jpg');
+
 			/*background-color: #22313F;*/
 			width: 120%;
 			height: 120%;
@@ -48,11 +45,15 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-
+			/*-webkit-filter: blur(1px);
+			-moz-filter: blur(1px);
+			-o-filter: blur(1px);
+			-ms-filter: blur(1px);
+			filter: blur(1px);*/
 
 		}
 
-		#message {
+		/*#message {
 			position: absolute;
 			z-index: 1;
 			background-color: #F2F3F7;
@@ -72,7 +73,7 @@
 
 		#message p b {
 			font-family: 'BrandonReg'
-		}
+		}*/
 
 		#about {
 			font-family: 'BrandonThin';
@@ -92,7 +93,7 @@
 			font-family: 'BrandonThin';
 			position: absolute;
 			left: 0;
-			top:calc(100% + 70px + 400px);
+			top:calc(100% + 400px);
 			background-color: #2ECC71;
 			color:white;
 			font-size: 40pt;
@@ -108,6 +109,12 @@
 			margin: 0 auto;
 			padding: 0;
 		}
+		#micon{
+			border-radius: 50%;
+			width: 150px;
+			height: 150px;
+			margin-bottom: 10px;
+		}
 		h5 {
 			text-align: center;
 			color:white;
@@ -117,6 +124,9 @@
 			margin: 0;
 			letter-spacing: 1px;
 		}
+		.smaller {
+			font-size: 20pt;
+		}
 
 	</style>
 </head>
@@ -124,14 +134,15 @@
 
 
 	<div id="landing">
-		<p></b>Dexto</b></p>
-		<h5>Myoelectric Position Acquisition.</h5>
+		<p></b><img id="micon" src="img/drifts.png"></b></p>
+		<h5>Rohan Iyer</h5>
+		<h5 class="smaller">developer. athlete. musician. student.</h5>
 		<!-- <img class="constellation" src="img/constel2.png"></img> -->
 
 	</div>
-	<div id="message">
+	<!-- <div id="message">
 		<p>Dexto is currently in <b>development!</b></p>
-	</div>
+	</div> -->
 	<div id="about">
 		<p>What is Dexto?</b></p>
 	</div>

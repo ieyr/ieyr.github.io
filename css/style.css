@@ -148,19 +148,20 @@ h5 {
 
 #project {
 	font-family: 'BrandonReg';
-	display: inline-block;
-	background-color: rgba(34,167,270,0.8);
+	display: inline-table;
+	position: relative;
 	color:white;
-	font-size: 40pt;
+	font-size: 30pt;
 	height: 300px;
 	width: 300px;
 	margin:10px;
 	text-align: center;
-	margin-top: 18px;
+	margin-top: 25px;
 	padding-top: 10px;
 	border-radius: 30px;
 }
 #projecttitle a{
+	background-color: rgba(255,255,255,0);
 	text-decoration: none;
 	-webkit-transition-duration: 0.2s;
 	-moz-transition-duration: 0.2s;
@@ -168,31 +169,79 @@ h5 {
 	color:white;
 }
 #projecttitle a:hover {
+
 	color:#4183D7;
 }
 #text {
 	margin: 10px;
 	font-size: 12pt;
 }
+
+
 a #goToProject  {
 	font-family: 'OpenSansNormal';
-	background-color: #4183D7;
-	color: white;
+	background-color: rgba(255,255,255,1.0);
+	position: absolute;
+	bottom: 20px;
+	right: 50px;
 	font-size: 12pt;
 	border: 0;
 	outline: none;
 	width: 200px;
 	height: 50px;
 	border-radius: 25px;
-	bottom:-20px;
-	position: relative;
+	margin-bottom: -40px
 
 	-webkit-transition-duration: 0.4s;
 	-moz-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 
 }
-a #goToProject:hover  {
-	background-color: white;
-	color: #4183D7;
+
+.buttonDiv {
+
 }
+
+a #goToProject:hover  {
+	background-color: rgba(255,255,255,0.6);
+}
+
+.red { background-color: rgba(246,71,71,0.8); }
+.red a #goToProject{
+	background-color: rgba(255,255,255,1.0);
+	color: rgba(246,71,71,1);
+}
+.red a #goToProject:hover{ background-color: rgba(255,255,255,0.6); }
+
+
+.orange { background-color: rgba(248,148,6,0.8); }
+.orange a #goToProject{
+	background-color: rgba(255,255,255,1.0);
+	color: rgba(248,148,6,1);
+}
+.orange a #goToProject:hover{ background-color: rgba(255,255,255,0.6); }
+
+
+.green { background-color: rgba(46,204,113,0.8); }
+.green a #goToProject{
+	background-color: rgba(255,255,255,1.0);
+	color: rgba(46,204,113,1);
+}
+.green a #goToProject:hover{ background-color: rgba(255,255,255,0.6); }
+
+
+.blue { background-color: rgba(34,167,240,0.8); }
+.blue a #goToProject{
+	background-color: rgba(255,255,255,1.0);
+	color: rgba(34,167,240,1);
+}
+.blue a #goToProject:hover{ background-color: rgba(255,255,255,0.6); }
+
+
+.purple { background-color: rgba(191,85,236,0.8); }
+.purple a #goToProject{
+	background-color: rgba(255,255,255,1.0);
+	color: rgba(191,85,236,1);
+}
+.purple a #goToProject:hover{ background-color: rgba(255,255,255,0.6); }
+

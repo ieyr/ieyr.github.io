@@ -12,7 +12,7 @@ body {
 
 @font-face {
 	font-family: BrandonReg;
-	src: url(../font/brandon/Brandon_med.otf);
+	src: url(../font/brandon/Brandon_light.otf);
 }
 
 #landing {
@@ -147,7 +147,7 @@ h5 {
 }
 
 #project {
-	font-family: 'BrandonThin';
+	font-family: 'BrandonReg';
 	display: inline-block;
 	background-color: rgba(34,167,270,0.8);
 	color:white;

@@ -54,17 +54,7 @@ function closeMenu(){
 	console.log('close menu')
 }
 
-$('body').click(function(evt){    
-       if(evt.target.id == "menu_content")
-          return;
-       //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
-       if($(evt.target).closest('#menu_content').length)
-          return;             
 
-      closeMenu()
-      //Do processing of click event here for every element except with id menu_content
-
-});
 
 function scrollToTop(){
 	$(document.body).clearQueue()
@@ -114,7 +104,18 @@ $('#contactlink').click(function(e){
 })
 $( document ).ready(function() {
     
+	$('body').click(function(evt){    
+		
+	      if(evt.target.id == "#navcontent")
+	         return;
+	      //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+	      if($(evt.target).closest('#navcontent').length)
+	         return;             
 
+	      closeMenu()
+	      //Do processing of click event here for every element except with id menu_content
+
+	});
     $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function(e){
      	if ( e.which > 0 || e.type == "mousedown" || e.type == "mousewheel"){
       		$("html,body").stop();

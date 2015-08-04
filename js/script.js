@@ -85,7 +85,10 @@ function scrollPortfolio(){
 	}, 1000)
 }
 
-
+function isMobile() {
+  try{ document.createEvent("TouchEvent"); return true; }
+  catch(e){ return false; }
+}
 
 
 
@@ -107,10 +110,14 @@ $( document ).ready(function() {
      	}
     })
 
-    if(window.innerWidth < 600){
+    if(isMobile()){
     	showHamburger()
     }else{
-    	hideHamburger()
-    }
+	    if(window.innerWidth < 600){
+	    	showHamburger()
+	    }else{
+	    	hideHamburger()
+	    }
+	}
     
 });

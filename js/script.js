@@ -14,6 +14,7 @@ ref.child('porfolio').on('child_added', function(snapshot){
 
 // Handle Scrolling to show Nav
 $(window).scroll(function(event){
+	window.scrollTo(0,$(document.body).scrollTop());
 	$(document.body).clearQueue()
 	var scrollHeight = $(document).scrollTop()
     if(scrollHeight > 10){
@@ -38,16 +39,32 @@ function showHamburger(){
 	$('#navcontent').empty()
 	$('#navcontent').append('<span id="ri" onclick="scrollToTop()">RI</span><a onclick="showMenu()" class="hamburger"><i class="icon-menu"></i></a>')
 }
-
 function hideHamburger(){
 	$('#navcontent').empty()
 
-	$('#navcontent').append('<span id="ri" onclick="scrollToTop()">RI</span><a id="contactlink" class="far">CONTACT</a><a id="portlink">PORTFOLIO</a><a id="aboutlink">ABOUT</a>')
+	$('#navcontent').append('<span id="ri" onclick="scrollToTop()">RI</span><a onclick="scrollContact()" class="far">CONTACT</a><a onclick="scrollPortfolio()">PORTFOLIO</a><a onclick="scrollAbout()">ABOUT</a>')
 }
 
 function showMenu(){
+	console.log('show menu')
+
 
 }
+function closeMenu(){
+	console.log('close menu')
+}
+
+$('body').click(function(evt){    
+       if(evt.target.id == "menu_content")
+          return;
+       //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+       if($(evt.target).closest('#menu_content').length)
+          return;             
+
+      closeMenu()
+      //Do processing of click event here for every element except with id menu_content
+
+});
 
 function scrollToTop(){
 	$(document.body).clearQueue()
@@ -78,12 +95,6 @@ function scrollPortfolio(){
 	}, 1000)
 }
 
-function scrollPortfolio(){
-	$(document.body).clearQueue()
-	$('html, body').animate({
-	    scrollTop: $("#contact").offset().top-70
-	}, 1000)
-}
 
 function isMobile() {
   try{ document.createEvent("TouchEvent"); return true; }
@@ -91,18 +102,18 @@ function isMobile() {
 }
 
 
+$('#portlink').click(function(e){
+	scrollPortfolio()
+})
+$('#aboutlink').click(function(e){
+	scrollAbout()
+})
 
+$('#contactlink').click(function(e){
+	scrollContact()
+})
 $( document ).ready(function() {
-    $('#portlink').click(function(e){
-    	scrollPortfolio()
-    })
-    $('#aboutlink').click(function(e){
-    	scrollAbout()
-    })
-
-    $('#contactlink').click(function(e){
-    	scrollContact()
-    })
+    
 
     $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup', function(e){
      	if ( e.which > 0 || e.type == "mousedown" || e.type == "mousewheel"){

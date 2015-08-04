@@ -148,6 +148,7 @@ body {
 
 	height: auto;
 	width: 100%;
+	padding: 80px;
 	padding-top: 20px;
 	margin: 0 auto;
 	padding: 20px;
@@ -174,7 +175,8 @@ body {
 	font-size: 40pt;
 	height: auto;
 	width: 100%;
-	padding: 20px;
+	padding: 80px;
+	padding-top: 20px;
 	padding-left: 0;
 	margin: 0 auto;
 }
@@ -209,15 +211,20 @@ h5 {
 	font-family: 'BrandonReg';
 	display: inline-table;
 	position: relative;
-	color:white;
+	color:rgba(108, 122, 137,1);
 	font-size: 30pt;
-	height: 300px;
-	width: 300px;
+	height: 260px;
+	width: 290px;
 	margin:10px;
 	text-align: center;
 	margin-top: 25px;
-	padding-top: 10px;
-	border-radius: 30px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+
+	border-radius: calc(50% + 30px);
+	box-shadow: 0 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
 #projecttitle a{
 	background-color: rgba(255,255,255,0);
@@ -225,7 +232,7 @@ h5 {
 	-webkit-transition-duration: 0.2s;
 	-moz-transition-duration: 0.2s;
 	transition-duration: 0.2s;
-	color:white;
+	color:rgba(108, 122, 137,1);
 }
 #projecttitle a:hover {
 
@@ -233,6 +240,7 @@ h5 {
 }
 #text {
 	margin: 10px;
+	margin-top: 0;
 	font-size: 12pt;
 }
 
@@ -241,12 +249,12 @@ a #goToProject  {
 	font-family: 'OpenSansNormal';
 	background-color: rgba(255,255,255,1.0);
 	position: absolute;
-	bottom: 20px;
-	right: 50px;
+	bottom: 35px;
+	right: 75px;
 	font-size: 12pt;
 	border: 0;
 	outline: none;
-	width: 200px;
+	width: 150px;
 	height: 50px;
 	border-radius: 25px;
 	margin-bottom: -40px
@@ -262,7 +270,8 @@ a #goToProject  {
 }
 
 a #goToProject:hover  {
-	background-color: rgba(255,255,255,0.6);
+
+	background-color:rgba(108, 122, 137,0.8);
 }
 
 .red { background-color: rgba(246,71,71,0.8); }
@@ -303,6 +312,13 @@ a #goToProject:hover  {
 	color: rgba(191,85,236,1);
 }
 .purple a #goToProject:hover{ background-color: rgba(255,255,255,0.6); }
+
+.gray { background-color: rgba(255,255,255,1); color:rgba(108, 122, 137,1);}
+.gray a #goToProject{
+	background-color: rgba(108, 122, 137,1.0);
+	color: rgba(236,236,236,1);
+}
+.gray a #goToProject:hover{ background-color:rgba(108, 122, 137,0.6); }
 /*End Of Project Stuff */
 
 /*Start Of Contact Stuff*/

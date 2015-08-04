@@ -15,6 +15,61 @@ body {
 	src: url(../font/brandon/Brandon_light.otf);
 }
 
+/*Start Of Navigation Bar*/
+#nav {
+	height: 70px;
+	width: 100%;
+	background-color: rgba(0,0,0,0);
+	color:white;
+	font-family: 'OpenSansNormal';
+	font-size: 20pt;
+	position: fixed;
+	top: 0;
+	left: 0; 
+	z-index: 2;
+
+	-webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+#navcontent {
+	position: fixed;
+	width: calc(100% - 40px);
+	height: 70px;
+	line-height: 70px;
+	margin-left: 40px;
+	margin-right: 0;	
+}
+
+#navcontent a {
+	font-size: 13pt;
+	text-decoration: none;
+	float: right;
+	margin-right: 50px;
+	color: white; 
+}
+
+.hamburger i{
+	position: fixed;
+	right: 1px;
+	font-size: 20pt;
+	text-decoration: none;
+	float: right;
+	color: white; 
+}
+
+
+#nav.scrolled {
+    background-color:rgba(0,0,0,0.5);
+}
+
+
+
+/*End Of Navigation Bar*/
+
+
 #landing {
 	font-size:50pt;
 	font-family: 'BrandonReg';
@@ -96,6 +151,7 @@ body {
 	padding-top: 20px;
 	margin: 0 auto;
 	padding: 20px;
+	padding-left: 0;
 
 
 }
@@ -107,16 +163,19 @@ body {
 	margin-bottom: 0;
 	margin-top: 0;
 }
+
+/*Start Of Project Stuff*/
 #features {
 	font-family: 'BrandonReg';
 	display: block;
 	background-color: rgba(34,167,270,0.8);
+	text-align: center;
 	color:white;
 	font-size: 40pt;
 	height: auto;
 	width: 100%;
-	padding-top: 20px;
 	padding: 20px;
+	padding-left: 0;
 	margin: 0 auto;
 }
 
@@ -244,4 +303,59 @@ a #goToProject:hover  {
 	color: rgba(191,85,236,1);
 }
 .purple a #goToProject:hover{ background-color: rgba(255,255,255,0.6); }
+/*End Of Project Stuff */
 
+/*Start Of Contact Stuff*/
+#contact {
+	font-family: 'BrandonReg';
+	display: block;
+	background-color: rgba(0,0,0,0.7);
+	color:white;
+	font-size: 40pt;
+	height: auto;
+	width: 100%;
+	padding: 150px;
+	padding-top: 20px;
+	padding-left: 0;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#contact p {
+	margin-bottom: 100px;
+}
+
+#contact a{
+	color:white;
+	-webkit-transition-duration: 0.4s;
+	-moz-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+#contact a:hover{
+	color:rgba(255,255,255,0.6);
+}
+
+i {
+	margin: 20px;
+
+}
+#email {
+	font-size: 15pt;
+}
+/*End Of Contact Stuff*/
+
+/*Start Of Footer*/
+#footer {
+	font-family: 'BrandonThin';
+	display: block;
+	background-color: rgba(103, 128, 159, 0.9);
+	color:white;
+	font-size: 15pt;
+	height: auto;
+	width: 100%;
+	padding: 20px;
+	padding-left: 0;
+	text-align: center;
+	margin: 0 auto;
+}
+/*End Of Footer*/

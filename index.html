@@ -1,14 +1,33 @@
 <html>
 <head>
 	<title>Rohan Iyer</title>
-	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	
 	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="lib/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/fontello/css/hamburger.css">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
+	<div id="nav">
+		<div id="navcontent">
+			
+			<span id="ri" onclick="scrollToTop()">RI</span>
+			<!-- 
+			<a id="contactlink" class="far">CONTACT</a>
+			<a id="portlink">PORTFOLIO</a>
+			<a id="aboutlink">ABOUT</a>
+			-->
+			<!--
+			<a onclick="showMenu()" class="hamburger"><i class="icon-menu"></i></a>
+			-->
+			<span id="ri" onclick="scrollToTop()">RI</span>
+			<a onclick="showMenu()" class="hamburger"><i class="icon-menu"></i></a>
+		</div>
+	</div>
 
 	<div id="landing">
 		<p></b><img id="micon" src="img/selfcropped.jpg"></b></p>
@@ -30,6 +49,7 @@
 			</div>
 			
 		</div>
+
 		<div id="features">
 			<p>portfolio</p>
 			<!-- <p id="text">Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
@@ -39,6 +59,19 @@
 				<a href="http://dextolabs.github.io"><button id="goToProject">LEARN MORE</button></a>	
 			</div> -->
 			
+		</div>
+
+		<div id="contact">
+			<p>contact</p>
+			<span id="email">riyerdev@gmail.com</span><br/>
+			<a href="https://github.com/ieyr/"><i class="fa fa-github"></i></a>
+			<a href="https://www.facebook.com/iyerohan"><i class="fa fa-facebook"></i></a>
+			<a href="https://www.linkedin.com/in/riyerr"><i class="fa fa-linkedin"></i></a>
+			<a href="mailto:riyerdev@gmail.com"><i style="font-size:35pt;"class="fa fa-envelope-o"></i></a>
+		</div>
+
+		<div id="footer">
+			&copy; Rohan Iyer
 		</div>
 	</div>
 	

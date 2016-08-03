@@ -12,6 +12,7 @@ ref.child('porfolio').on('child_added', function(snapshot){
 })
 
 
+
 // Handle Scrolling to show Nav
 $(window).scroll(function(event){
 	window.scrollTo(0,$(document.body).scrollTop());
@@ -103,14 +104,17 @@ $('#contactlink').click(function(e){
 	scrollContact()
 })
 $( document ).ready(function() {
-    
-	$('body').click(function(evt){    
-		
+
+
+	
+
+	$('body').click(function(evt){
+
 	      if(evt.target.id == "#navcontent")
 	         return;
 	      //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
 	      if($(evt.target).closest('#navcontent').length)
-	         return;             
+	         return;
 
 	      closeMenu()
 	      //Do processing of click event here for every element except with id menu_content
@@ -131,5 +135,5 @@ $( document ).ready(function() {
 	    	hideHamburger()
 	    }
 	}
-    
+
 });

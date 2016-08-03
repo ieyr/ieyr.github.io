@@ -139,6 +139,13 @@ body {
 	display: block;
 }
 
+#spotify-widget {
+	margin: 67px;
+	margin-top: 10px;
+	margin-bottom: -10px;
+
+}
+
 #about {
 	font-family: 'BrandonReg';
 	display: block;
@@ -189,9 +196,11 @@ p {
 	padding: 0;
 }
 #micon{
-	border-radius: 50%;
+
 	width: 150px;
 	height: 150px;
+	border-radius: 50%;
+	border-width: 10px;
 	margin-bottom: 10px;
 }
 h5 {

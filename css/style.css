@@ -25,7 +25,7 @@ body {
 	font-size: 20pt;
 	position: fixed;
 	top: 0;
-	left: 0; 
+	left: 0;
 	z-index: 2;
 
 	-webkit-transition: background-color 200ms linear;
@@ -40,7 +40,7 @@ body {
 	height: 70px;
 	line-height: 70px;
 	margin-left: 40px;
-	margin-right: 0;	
+	margin-right: 0;
 }
 
 #navcontent a {
@@ -48,7 +48,7 @@ body {
 	text-decoration: none;
 	float: right;
 	margin-right: 50px;
-	color: white; 
+	color: white;
 }
 
 .hamburger i{
@@ -57,7 +57,7 @@ body {
 	font-size: 20pt;
 	text-decoration: none;
 	float: right;
-	color: white; 
+	color: white;
 }
 
 
@@ -91,7 +91,7 @@ body {
 	z-index: -1;
 	display: block;
 
-	background-image: url('../img/background4.jpg');
+	background-image: url('../img/background5.jpg');
 
 	/*background-color: #22313F;*/
 	width: 120%;

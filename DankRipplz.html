@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Dank Ripplz</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <style>
+    @font-face {
+      font-family: SanFrancisco;
+      src: url(DankRipplzData/font/SF-UI-Display-Ultralight.otf);
+
+    }
+
+    body {
+
+      background-color: #213D4D;
+      font-family: SanFrancisco;
+      font-weight: 100;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+
+    }
+
+    #leftswag {
+      font-family: SanFrancisco;
+      font-size: 2em;
+      color: #00B6E2;
+      margin: 15px;
+      float: left;
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    #centerswag {
+      font-family: SanFrancisco;
+      font-size: 2em;
+      color: #12D290;
+      left: 50%;
+      position: fixed;
+      text-align: center;
+      width: 200px;
+      margin-left: -100px;
+      margin-top:15px;
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+    }
+
+    #rightswag {
+      font-family: SanFrancisco;
+      font-size: 2em;
+      color: #00B6E2;
+      right: 0px;
+      position: absolute;
+      text-align: center;
+      margin: 15px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+    }
+
+    #bottomswag {
+      font-family: SanFrancisco;
+      font-size: 0.8em;
+      color: #00B6E2;
+      text-align: center;
+      bottom: 0px;
+      position: fixed;
+      margin: 15px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      pointer-events:none;
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+
+    g {
+      width: 100px;
+      height: 100px;
+    }
+
+
+
+    svg {
+      background-color: #1A2A35;
+      cursor: pointer;
+      width: 9001px;
+      height: 9001px;
+      border: 1px #00B6E2 solid;
+      border-left: 0px;
+      border-right: 0px;
+      border-bottom: 1px #00B6E2 solid;
+    }
+
+    circle {
+      fill: none;
+    }
+
+  </style>
+  <script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
+  <script src="DankRipplzData/script/d3.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+
+  <p id = "leftswag">Total Danks: </p>
+  <p id = "rightswag">Online Dankers: </p>
+  <div id = "centerswag">Dank Ripplz</div>
+
+  <p text-align="center" id="bottomswag">Made with 1337 h4x0r skillz by Rohan Iyer, Ayush Jain, Stuart Rucker, and Davin Tjong.</p>
+  <audio id="dankstorm" src="DankRipplzData/audio/dankstorm.mp3" ></audio>
+  <audio id="smokeweed" src="DankRipplzData/audio/smokeweed.mp3" ></audio>
+  <audio id="momscamera" src="DankRipplzData/audio/momgetthecamera.mp3" ></audio>
+
+
+  <script type="text/javascript">
+  var highAf = false
+  var userid = Math.random().toString(36).substr(2, 5)
+  var colorR
+  var colorG
+  var colorB
+  $( document ).ready(function() {
+      colorR = Math.floor((Math.random() * 255));
+      colorG = Math.floor((Math.random() * 255));
+      colorB = Math.floor((Math.random() * 255));
+
+  });
+  function turnUp(){
+      var audio = document.getElementById("dankstorm");
+      audio.play();
+  }
+  function smokeWeed(){
+      var audio = document.getElementById("smokeweed");
+      audio.play();
+  }
+  function momsCamera(){
+      var audio = document.getElementById("momscamera");
+      audio.play();
+  }
+
+
+
+  var r1 = 400;
+  var ref = new Firebase('https://dankripplz.firebaseio.com')
+
+  var svg = d3.select("body")
+  .append("svg");
+
+  function OHBABYATRIPLE(){
+    highAf = true;
+  }
+
+
+
+  svg.on("click", function () { //<-D
+    var dashLength = Math.floor((Math.random() * 20));
+    var spaceLength = Math.floor((Math.random() * 20));
+    var position = d3.mouse(svg.node());
+    createRipple(position[0], position[1], colorR, colorG, colorB, dashLength, spaceLength)
+    ref.push({x: position[0], y: position[1], r: colorR, g: colorG, b: colorB, dl: dashLength, sl:spaceLength})
+
+  });
+
+
+
+  ref.on('child_added', function(snapshot){
+    createRipple(snapshot.child('x').val(), snapshot.child('y').val(), snapshot.child('r').val(), snapshot.child('g').val(), snapshot.child('b').val(), snapshot.child('dl').val(), snapshot.child('sl').val())
+  })
+
+  ref.child('totaldanks').on('value', function(snapshot){
+    $('#leftswag').text('Total Danks: ' + snapshot.val())
+    var totalswags = snapshot.val();
+    totalswags = totalswags.toString();
+    if(totalswags.includes("69")){
+      turnUp();
+    }
+    if(totalswags.includes("420")){
+      smokeWeed();
+    }
+    if(totalswags.includes("1337")){
+      momsCamera();
+    }
+  })
+
+  ref.child('presence').on('value', function(snapshot){
+    $('#rightswag').text('Online Dankers: ' + snapshot.numChildren())
+
+  })
+
+  var amOnline = new Firebase('https://dankripplz.firebaseio.com/.info/connected');
+  var userRef = new Firebase('https://dankripplz.firebaseio.com/presence/' + userid);
+  amOnline.on('value', function(snapshot) {
+    if (snapshot.val()) {
+      userRef.onDisconnect().remove();
+      userRef.set(true);
+    }
+  });
+
+
+  function createRipple(ex, ey, r, g, b, dl, sl){
+    for (var i = 1; i < 5; ++i) {
+
+      if(highAf){
+        r = Math.floor((Math.random() * 155) + 100);
+        g = Math.floor((Math.random() * 155) + 100);
+        b = Math.floor((Math.random() * 155) + 100);
+      }
+
+      var circle = svg.append("circle")
+      .style('stroke', 'rgb(' + r + ',' + g + ',' + b + ')')
+      .attr("cx", ex)
+      .attr("cy", ey)
+      .attr("r", 0)
+      .attr("stroke-dasharray", dl + "," + sl)
+      .style("stroke-width", 5 / (i))
+      .transition()
+      .delay(Math.pow(i, 2.5) * 50)
+      .duration(2000)
+      .ease('quad-in')
+      .attr("r",r1)
+      .style("stroke-opacity", 0)
+      .each("end", function () {
+        d3.select(this).remove();
+      });
+    }
+  }
+
+
+  </script>
+</body>
+</html>

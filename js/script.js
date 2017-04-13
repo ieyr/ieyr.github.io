@@ -1,8 +1,14 @@
 var ref = new Firebase('https://rohaniyer.firebaseio.com')
 ref.child('porfolio').on('child_added', function(snapshot){
 	var value = snapshot.val()
+
 	var name = value["name"]
+
+
 	var link = value["link"]
+	if(name == "DankRipplz") {
+		link = "DankRipplz.html"
+	}
 	var desc = value["description"]
 	var prize = value["prize"]
 	var color = value["color"]
@@ -106,7 +112,7 @@ $('#contactlink').click(function(e){
 $( document ).ready(function() {
 
 
-	
+
 
 	$('body').click(function(evt){
 

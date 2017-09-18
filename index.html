@@ -1,98 +1,756 @@
-<html>
+<!DOCTYPE html><html lang="en">
+
 <head>
+	<!-- Basic informations -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Site informations -->
 	<title>Rohan Iyer</title>
+	<meta name="author" content="Rohan Iyer">
+	<meta name="description" content="Personal Website">
 
-	<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="spotifyCurrentlyPlaying.js"></script>
+	<!-- Open Graph -->
+	<meta property="og:title" content="Rohan Iyer">
+	<meta property="og:description" content="Rohan Iyer's Personal Website">
+	<!-- <meta property="og:url" content="http://serafin.io/aurora-template/"> -->
+	<!-- <meta property="og:image" content="http://serafin.io/aurora-template/content/og_image.png"> -->
 
-	<script src="lib/jquery-ui.min.js"></script>
+	<!-- Twitter Card -->
+	<!--
+	<meta name="twitter:title" content="">
+	<meta name="twitter:description" content="">
+	<meta name="twitter:domain" content="">
+	<meta name="twitter:image:src" content="">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:card" content="">
+	-->
 
-	<script>
-	SCP({
-		selector: '#spotify-widget',
-		username: 'rohaniyer',
-		api_key: '9bebef98de8bd59688191be88380d4ee',
-		width: '100%',
-		height: '100'
-	});
-	</script>
-	<script type="text/javascript" src="js/script.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/fontello/css/hamburger.css">
-	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="style/favicon/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="style/favicon/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="style/favicon/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="style/favicon/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="style/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="style/favicon/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="style/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="style/favicon/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="style/favicon/apple-touch-icon-76x76.png">
+	<link rel="icon" type="image/png" href="style/favicon/favicon-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="style/favicon/favicon-160x160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="style/favicon/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="style/favicon/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="style/favicon/favicon-32x32.png" sizes="32x32">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="style/favicon/mstile-144x144.png">
+	<meta name="msapplication-config" content="style/favicon/browserconfig.xml">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Fonts -->
+	<link href="style/fonts/webfont-raleway/webfont-raleway.css" rel="stylesheet" type="text/css">
+	<link href="style/fonts/webfont-font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+	<!-- Stylesheets -->
+	<link href="style/css/global.css" type="text/css" rel="stylesheet" media="all">
+
+	<!-- Scripts preload -->
+	<!--[if lt IE 9]><script src="style/js/html5shiv.js"></script><![endif]-->
 </head>
+
 <body>
-	<div id="nav">
-		<div id="navcontent">
 
-			<span id="ri" onclick="scrollToTop()">RI</span>
-			<!--
-			<a id="contactlink" class="far">CONTACT</a>
-			<a id="portlink">PORTFOLIO</a>
-			<a id="aboutlink">ABOUT</a>
-			-->
-			<!--
-			<a onclick="showMenu()" class="hamburger"><i class="icon-menu"></i></a>
-			-->
-			<span id="ri" onclick="scrollToTop()">RI</span>
-			<a onclick="showMenu()" class="hamburger"><i class="icon-menu"></i></a>
-		</div>
-	</div>
 
-	<div id="landing">
-		<p></b><img id="micon" src="img/selfcropped.jpg"></b></p>
-		<h5>rohan iyer</h5>
-		<h5 class="smaller">developer. athlete. musician. student.</h5>
-		<!-- <img class="constellation" src="img/constel2.png"></img> -->
 
-	</div>
-	<!-- <div id="message">
-		<p>Dexto is currently in <b>development!</b></p>
-	</div> -->
-	<div id="content">
-		<div id="about">
-			<p>about me</p>
-			<div id="aboutText">
-				Welcome to my personal website! I'm a senior in high school and I enjoy coding and going to hackathons. I listen to
-				all sorts of music and in my free time I play guitar and bass. I also work on some pretty cool projects which you can check out below.<br/><br/>
+
+
+
+	<!-- Some Helper Stuff -->
+	<div id="start" class="start">&nbsp;</div>
+	<div class="maxwidth1050">&nbsp;</div>
+
+
+
+
+
+
+
+	<!-- Header -->
+	<header class="header">
+		<div class="header__wrapper">
+			<div class="header__hamburger">
+				<div class="header__hamburger-block">&nbsp;</div>
+				<div class="header__hamburger-block">&nbsp;</div>
+				<div class="header__hamburger-block">&nbsp;</div>
 			</div>
-			<div id="aboutText">
-					<b>I'm currently listening to:</b>
+			<nav class="header__navigation">
+				<a href="#start" class="js-smooth-scroll">
+					<div class="js-smooth-scroll  header__navigation-element">Start...</div>
+				</a>
+				<a href="#experience" class="js-smooth-scroll">
+					<div class="header__navigation-element  header__navigation-element--experience">Skills...</div>
+				</a>
+				<a href="#features" class="js-smooth-scroll">
+					<div class="header__navigation-element  header__navigation-element--features">Guarantees...</div>
+				</a>
+				<a href="#realizations" class="js-smooth-scroll">
+					<div class="header__navigation-element  header__navigation-element--realizations">Portfolio...</div>
+				</a>
+				<a href="#contact" class="js-smooth-scroll">
+					<div class="header__navigation-element  header__navigation-element--contact">Contact...</div>
+				</a>
+			</nav>
+
+			<!-- <a href="#start" class="header__title-wrapper  js-smooth-scroll">
+				<div class="header__title-main">Aurora Template</div>
+				<div class="header__title-sub">By Dominik Serafin</div>
+			</a> -->
+
+			<div class="header__social-icons">
+				<!-- <a target="_blank" href="https://dribbble.com/DominikSerafin"><i class="fa fa-dribbble"></i></a> -->
+				<!-- <a target="_blank" href="https://twitter.com/SerafinDominik"><i class="fa fa-twitter"></i></a> -->
+				<!-- <a target="_blank" href="https://www.behance.net/dominikserafin"><i class="fa fa-behance"></i></a> -->
+				<a target="_blank" href="https://github.com/rohaniyer/"><i class="fa fa-github"></i></a>
+				<!-- <a target="_blank" href="https://linkedin.com/pub/dominik-serafin/a1/672/93b"><i class="fa fa-linkedin"></i></a> -->
 			</div>
-			<div style="z-index:101;" id="spotify-widget"></div>
 		</div>
-
-		<div id="features">
-			<p>portfolio</p>
-			<!-- <p id="text">Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
-			<div id="project">
-				<div id="projecttitle"><a href="http://dextolabs.github.io">Dexto</a></div>
-				<p id="text">This project won sucha nd sdushc beause it wwas sucha  great project</p>
-				<a href="http://dextolabs.github.io"><button id="goToProject">LEARN MORE</button></a>
-			</div> -->
+	</header>
+	<!-- End Header -->
 
 
+
+
+
+
+
+
+	<!-- First Fixed "Hero" Section -->
+	<section id="hero" class="hero">
+		<div class="hero__background">&nbsp;</div>
+		<div class="hero__gradient">&nbsp;</div>
+		<div class="hero__pattern">&nbsp;</div>
+		<div class="hero__content">
+			<div class="hero__content-wrapper">
+				<div class="hero__title-wrapper">
+					<div class="hero__title-large">Hello!</div>
+					<div class="hero__title-small">I'm Rohan.</div>
+				</div>
+				<div class="hero__photo-wrapper">
+					<div class="hero__photo">
+						<!--<div class="hero__hat">&nbsp;</div>-->
+					</div>
+				</div>
+				<div class="hero__description">
+				Welcome to my personal website. I'm currently a freshman at UC Santa Cruz majoring in Computer Science. You can find some of my skill and projects further down the page.
+				</div>
+				<div class="hero__call-to-action">
+
+					<p target="_blank" class="hero__alt-button">Scroll to find out more about me.</p>
+				</div>
+			</div>
 		</div>
+	</section>
+	<!-- End First Fixed "Hero" Section -->
 
-		<div id="contact">
 
-			<p>contact</p>
-			<span id="email">riyerdev@gmail.com</span><br/>
-			<a href="https://github.com/rohaniyer/"><i class="fa fa-github"></i></a>
-			<a href="https://www.facebook.com/iyerohan"><i class="fa fa-facebook"></i></a>
-			<a href="https://www.linkedin.com/in/riyerr"><i class="fa fa-linkedin"></i></a>
-			<a href="mailto:riyerdev@gmail.com"><i style="font-size:35pt;"class="fa fa-envelope-o"></i></a>
-		</div>
 
-		<div id="footer">
-			&copy; Rohan Iyer
-		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Scrollable Content -->
+	<div class="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- "Experience" Section -->
+		<section id="experience" class="experience">
+			<div class="experience__hollow-arrow">&nbsp;</div>
+			<div class="experience__wrapper">
+				<div class="section-header">
+					<div class="section-header__title  section-header__title--experience">My Skills</div>
+					<div class="section-header__subtitle">Software and technology that I'm experienced in</div>
+				</div>
+				<div class="experience__icons-wrapper">
+					<div class="experience__icon  experience__icon--html5">
+						<div class="experience__icon-description">HTML5</div>
+					</div>
+					<div class="experience__icon  experience__icon--css3">
+						<div class="experience__icon-description">CSS3</div>
+					</div>
+					<div class="experience__icon  experience__icon--javascript">
+						<div class="experience__icon-description">JavaScript</div>
+					</div>
+					<!-- <div class="experience__icon  experience__icon--sass">
+						<div class="experience__icon-description">SASS</div>
+					</div> -->
+					<div class="experience__icon  experience__icon--jquery">
+						<div class="experience__icon-description">jQuery</div>
+					</div>
+					<div class="experience__icon  experience__icon--git">
+						<div class="experience__icon-description">GIT</div>
+					</div>
+					<!-- <div class="experience__icon  experience__icon--wordpress">
+						<div class="experience__icon-description">WordPress</div>
+					</div> -->
+					<div class="experience__icon  experience__icon--photoshop">
+						<div class="experience__icon-description">Adobe Photoshop</div>
+					</div>
+					<div class="experience__icon  experience__icon--illustrator">
+						<div class="experience__icon-description">Adobe Illustrator</div>
+					</div>
+					<!-- <div class="experience__icon  experience__icon--fireworks">
+						<div class="experience__icon-description">Adobe Fireworks</div>
+					</div> -->
+					<div class="experience__icon  experience__icon--bootstrap">
+						<div class="experience__icon-description">Bootstrap 3</div>
+					</div>
+					<!-- <div class="experience__icon  experience__icon--foundation">
+						<div class="experience__icon-description">Foundation 5</div>
+					</div> -->
+				</div>
+			</div>
+		</section>
+		<!-- End "Experience" Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- "Features" Section -->
+		<!-- <section id="features" class="features">
+			<div class="features__wrapper">
+				<div class="section-header">
+					<div class="section-header__title  section-header__title--features">I Provide Websites...</div>
+					<div class="section-header__subtitle">I try my best to fulfill these points for the greatest possible customer satisfaction</div>
+				</div>
+				<div class="features__elements-wrapper">
+					<div class="features__element">
+						<div class="features__image  features__image--mobile">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Responsive and Mobile Friendly</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--newest">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Made with Newest Technologies</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--intuitive">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Visually Attractive and Intuitive</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--browsers">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Compatible with Every Browser</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam, natus est eos fugit doloremque dolorum.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--clients">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Unique for Every Client</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--fast">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Fast and Performant</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea placeat quidem.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--seo">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Search Engine Friendly</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--secure">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Secure</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam, natus.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--semantic">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Semantic</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea! Placeat quidem magnam, natus est eos fugit doloremque.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--sourcefiles">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Provided with Source Code</div>
+							<div class="features__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ducimus, nemo corrupti voluptas ea.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- End "Features" Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- "Realizations" Section - With Projects -->
+		<section id="realizations" class="realizations">
+			<div class="realizations__wrapper">
+
+				<div class="section-header">
+					<div class="section-header__title  section-header__title--realizations">Portfolio</div>
+					<!-- <div class="section-header__subtitle">Selected projects that I had the pleasure to work on</div> -->
+				</div>
+
+				<div class="showcase">
+					<div class="showcase__thumbnails-wrapper">
+
+						<!-- normal -->
+						<img data-project="p1" class="showcase__thumb  showcase__thumb--first  showcase__thumb--active" src="content/project01_thumb.jpg">
+						<img data-project="p2" class="showcase__thumb" src="content/project_placeholder_thumb.jpg">
+						<img data-project="p3" class="showcase__thumb" src="content/project_placeholder_thumb.jpg">
+						<img data-project="p4" class="showcase__thumb" src="content/project_placeholder_thumb.jpg">
+						<img data-project="p5" class="showcase__thumb" src="content/project_placeholder_thumb.jpg">
+
+						<!-- blank template
+						<div data-project="p5" class="showcase__thumb  showcase__thumb--blank">&nbsp;</div>
+						 -->
+
+					</div>
+
+
+
+					<div class="showcase__stage-wrapper">
+
+						<!-- project 1 -->
+						<div data-project="p1" class="showcase__stage  showcase__stage--active">
+							<div class="showcase__slider">
+								<ul class="rslides">
+
+									<li>
+										<a href="content/project01_slide01.jpg" target="_blank">
+											<img src="content/project01_slide01.jpg">
+										</a>
+									</li>
+
+									<li>
+										<a href="content/project01_slide02.jpg" target="_blank">
+											<img src="content/project01_slide02.jpg">
+										</a>
+									</li>
+
+								</ul>
+							</div>
+							<div class="showcase__infos-wrapper">
+								<div class="showcase__title">
+									ClouDraw
+									<div class="showcase__title-description">Hackathon Project</div>
+								</div>
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">My Responsibilites</div>
+									<div class="showcase__point-description">
+										Back-End Development and Myo integration.
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Technologies Used</div>
+									<div class="showcase__point-description">
+										Myo Armband, Leap Motion, HTML5, CSS3, JavaScript, jQuery, Lua.
+									</div>
+								</div>
+
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">Details</div>
+									<div class="showcase__point-details-excerpt">
+										ClouDraw lets you draw with others on a whiteboard using motion tracking hardware. <!--<span class="showcase__ellipsis"></span>-->
+									</div>
+								</div>
+
+
+								<a target="_blank" href="http://cloudraw.buildncode.com/draw.html" class="showcase__button  ghost-button  ghost-button--realizations">Visit Website</a>
+							</div>
+						</div>
+
+						<!-- project 2 -->
+						<div data-project="p2" class="showcase__stage">
+							<div class="showcase__slider">
+								<ul class="rslides">
+
+									<li>
+										<a href="content/project_placeholder_slide.jpg" target="_blank">
+											<img src="content/project_placeholder_slide.jpg">
+										</a>
+									</li>
+
+									<li>
+										<a href="content/project_placeholder_slide.jpg" target="_blank">
+											<img src="content/project_placeholder_slide.jpg">
+										</a>
+									</li>
+
+									<li>
+										<a href="content/project_placeholder_slide.jpg" target="_blank">
+											<img src="content/project_placeholder_slide.jpg">
+										</a>
+									</li>
+
+									<li>
+										<a href="content/project_placeholder_slide.jpg" target="_blank">
+											<img src="content/project_placeholder_slide.jpg">
+										</a>
+									</li>
+
+								</ul>
+							</div>
+							<div class="showcase__infos-wrapper">
+								<div class="showcase__title">
+									Dexto
+									<div class="showcase__title-description">Hackathon Project</div>
+								</div>
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">My Responsibilites</div>
+									<div class="showcase__point-description">
+										Finger positioning algorithm and Back-End Development.
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Technologies Used</div>
+									<div class="showcase__point-description">
+										Myo Armband, HTML5, CSS3, JavaScript, jQuery, D3.js.
+									</div>
+								</div>
+
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">Details</div>
+									<div class="showcase__point-details-excerpt">
+										Dexto uses the Myo Armband's EMG sensors to get the position of individual fingers which can then be applied to hand prosthetic software.<!--<span class="showcase__ellipsis"></span>-->
+									</div>
+								</div>
+
+
+								<a target="_blank" href="http://dextolabs.github.io" class="showcase__button  ghost-button  ghost-button--realizations">Visit Website</a>
+							</div>
+						</div>
+
+						<!-- project 3 -->
+						<div data-project="p3" class="showcase__stage">
+							<div class="showcase__slider">
+								<ul class="rslides">
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+								</ul>
+							</div>
+							<div class="showcase__infos-wrapper">
+								<div class="showcase__title">
+									Strum
+									<div class="showcase__title-description">Personal Project</div>
+								</div>
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">My Responsibilites</div>
+									<div class="showcase__point-description">
+										Sound synthesis algorithm and UX.
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Technologies Used</div>
+									<div class="showcase__point-description">
+										Pure Data, Swift, Xcode.
+									</div>
+								</div>
+
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">Details</div>
+									<div class="showcase__point-details-excerpt">
+										A virtual Ukelele application built for iOS that uses Pure Data for sound synthesis.
+									</div>
+								</div>
+
+
+								<a target="_blank" href="https://itunes.apple.com/us/app/id925621953" class="showcase__button  ghost-button  ghost-button--realizations">Download App</a>
+							</div>
+						</div>
+
+						<!-- project 4 -->
+						<div data-project="p4" class="showcase__stage">
+							<div class="showcase__slider">
+								<ul class="rslides">
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+								</ul>
+							</div>
+							<div class="showcase__infos-wrapper">
+								<div class="showcase__title">
+									Rubbr
+									<div class="showcase__title-description">Personal Project</div>
+								</div>
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">My Responsibilites</div>
+									<div class="showcase__point-description">
+										Front-end game development, Back-end development.
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Technologies Used</div>
+									<div class="showcase__point-description">
+										Javascript, Node.js, Socket.io, HTML5 Canvas.
+									</div>
+								</div>
+
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">Details</div>
+									<div class="showcase__point-details-excerpt">
+										A fun side project that uses HTML5 Canvas and Socket.io. Rubbr.io is a game similar to agar.io crossed with GTA.
+									</div>
+								</div>
+
+
+								<a target="_blank" href="https://rubbr.github.io" class="showcase__button  ghost-button  ghost-button--realizations">Visit Website</a>
+							</div>
+						</div>
+
+						<!-- project 5 -->
+						<div data-project="p5" class="showcase__stage">
+							<div class="showcase__slider">
+								<ul class="rslides">
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+									<li><img src="content/project_placeholder_slide.jpg"></li>
+								</ul>
+							</div>
+							<div class="showcase__infos-wrapper">
+								<div class="showcase__title">
+									DankRipplz
+									<div class="showcase__title-description">Personal Project</div>
+								</div>
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">My Responsibilites</div>
+									<div class="showcase__point-description">
+										Front-end development, Back-end development.
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Technologies Used</div>
+									<div class="showcase__point-description">
+										Javascript, Node.js, D3.js, Firebase, HTML5, CSS3.
+									</div>
+								</div>
+
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">Details</div>
+									<div class="showcase__point-details-excerpt">
+										A fun side project that uses D3.js and Firebase, collaboratively make awesome ripples!
+									</div>
+								</div>
+
+
+								<a target="_blank" href="DankRipplz.html" class="showcase__button  ghost-button  ghost-button--realizations">Visit Website</a>
+							</div>
+						</div>
+
+
+					</div>
+
+
+
+				</div>
+			</div>
+		</section>
+		<!-- End "Realizations" Section - With Projects -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- "Contact" Section -->
+		<section id="contact" class="contact">
+			<div class="contact__wrapper">
+				<div class="section-header">
+					<div class="section-header__title  section-header__title--contact">Contact</div>
+					<div class="section-header__subtitle">Contact me through social media or shoot me an email.</div>
+				</div>
+
+				<div class="contact__icons-wrapper">
+					<div class="contact__icon">
+						<a target="_blank" href="mailto:riyerdev@gmail.com"><i class="fa fa-envelope"></i></a>
+						<div class="contact__icon-description">riyerdev@gmail.com</div>
+					</div>
+					<div class="contact__icon">
+						<a target="_blank" href="https://facebook.com/iyerohan"><i class="fa fa-facebook"></i></a>
+						<div class="contact__icon-description">@iyerohan</div>
+					</div>
+					<div class="contact__icon">
+						<a target="_blank" href="https://dribbble.com/DominikSerafin"><i class="fa fa-linkedin"></i></a>
+						<div class="contact__icon-description">Linkedin</div>
+					</div>
+				</div>
+
+				<div class="contact__spacer">&nbsp;</div>
+
+				<!-- <form class="contact__form">
+
+					<div class="contact__textarea-wrapper">
+						<label for="message_content" class="contact__label">Message</label>
+						<div class="contact__response-ajax-text">&nbsp;</div>
+						<textarea id="message_content" rows="10" placeholder="Hello! Would you be interested in collaboration for the greatest project ever?" required></textarea>
+					</div>
+
+					<div class="contact__bottom-wrapper">
+						<div class="contact__sender-info-wrapper">
+							<div class="contact__input-wrapper  contact__input-wrapper--name">
+								<label for="sender_name" class="contact__label">Your Name</label>
+								<div class="contact__response-ajax-text">&nbsp;</div>
+								<input id="sender_name" type="text" placeholder="John Kowalski" required>
+							</div>
+							<div class="contact__input-wrapper  contact__input-wrapper--email">
+								<label for="sender_email" class="contact__label">Your E-mail</label>
+								<div class="contact__response-ajax-text">&nbsp;</div>
+								<input id="sender_email" type="email" placeholder="john@example.com" required>
+							</div>
+						</div>
+
+						<div class="contact__button-wrapper  ghost-button  ghost-button--contact">
+							<div class="contact__paper-plane-wrapper"><i class="fa fa-paper-plane"></i></div>
+							<div class="contact__response  contact__response--success">
+								<div class="contact__response-title"><i class="fa fa-check"></i> Message was sent.</div>
+								<div class="contact__response-description  contact__response-description--success">&nbsp;</div>
+							</div>
+							<div class="contact__response  contact__response--error">
+								<div class="contact__response-title"><i class="fa fa-warning"></i> Error.</div>
+								<div class="contact__response-description  contact__response-description--error">Message couldn't be sent.</div>
+							</div>
+							<input id="contact__submit" type="button" value=" ">
+						</div>
+					</div>
+				</form> -->
+
+			</div>
+		</section>
+		<!-- End "Contact" Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Footer -->
+		<!-- <footer id="footer" class="footer">
+			<div class="footer__wrapper">
+				<div class="footer__copyright">Some Rights Reserved &copy; 2015</div>
+				<a href="http://serafin.io/?utm_source=Aurora-Template&utm_medium=Footer-Image&utm_campaign=Freebie" target="_blank" class="footer__image">&nbsp;</a>
+			</div>
+		</footer> -->
+		<!-- End Footer -->
+
+
+
+
+
+
+
+
 	</div>
+	<!-- End Scrollable Content -->
 
 
-	<div id="background"></div>
+
+
+
+
+
+
+
+
+
+
+	<!-- Scripts postload -->
+	<script src="style/js/dependencies.min.js" type="text/javascript"></script>
+	<script src="style/js/global.js" type="text/javascript"></script>
 
 </body>
 </html>
